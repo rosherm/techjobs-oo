@@ -63,7 +63,9 @@ public class JobData {
 
         for (Job job : jobs) {
 
-            if (job.getName().toLowerCase().contains(value)) {
+            //BUG!! Changed the below line value.toLowerCase() to allow for searching with uppercase
+
+            if (job.getName().toLowerCase().contains(value.toLowerCase())) {
                 matchingJobs.add(job);
                 continue;
             }
